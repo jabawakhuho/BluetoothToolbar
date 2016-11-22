@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sds.study.bluetoothtoolbar.MainActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <Button
+            android:enabled="true"
+            android:id="@+id/bt_scan"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="검색"
+            android:onClick="btnClick"/>
+        <TextView
+            android:id="@+id/txt_receive"
+            android:gravity="center_vertical"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="서버에서 받은 글"
+            android:background="#FFFFDD00"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </ListView>
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/txt_send"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="보낼 글"
+            android:background="#FF00DDFF"/>
+        <Button
+            android:id="@+id/bt_send"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="전송"
+            android:onClick="btnClick"/>
+    </LinearLayout>
+
+</LinearLayout>
